@@ -1,0 +1,9 @@
+[Unit]
+Description=Weston Wayland Compositor for DRM Lease
+
+[Service]
+Environment=XDG_RUNTIME_DIR=/tmp
+ExecStart=/usr/bin/weston --drm-lease=${DRM_LEASE_DEVICE}
+
+[Install]
+WantedBy=multi-user.target
